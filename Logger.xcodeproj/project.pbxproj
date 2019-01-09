@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		E6F40D6621E6B1A900C2E404 /* Logger.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F40D6421E6B1A900C2E404 /* Logger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6F40D7221E6B1D300C2E404 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F40D6E21E6B1D300C2E404 /* Strings.swift */; };
+		E6F40D7321E6B1D300C2E404 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F40D6F21E6B1D300C2E404 /* Formatters.swift */; };
+		E6F40D7421E6B1D300C2E404 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F40D7021E6B1D300C2E404 /* Formatter.swift */; };
+		E6F40D7521E6B1D300C2E404 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F40D7121E6B1D300C2E404 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E6F40D6121E6B1A900C2E404 /* Logger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F40D6421E6B1A900C2E404 /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
 		E6F40D6521E6B1A900C2E404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6F40D6E21E6B1D300C2E404 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E6F40D6F21E6B1D300C2E404 /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		E6F40D7021E6B1D300C2E404 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		E6F40D7121E6B1D300C2E404 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +54,30 @@
 		E6F40D6321E6B1A900C2E404 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
+				E6F40D6C21E6B1B400C2E404 /* Source */,
 				E6F40D6421E6B1A900C2E404 /* Logger.h */,
 				E6F40D6521E6B1A900C2E404 /* Info.plist */,
 			);
 			path = Logger;
+			sourceTree = "<group>";
+		};
+		E6F40D6C21E6B1B400C2E404 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E6F40D7121E6B1D300C2E404 /* Logger.swift */,
+				E6F40D7021E6B1D300C2E404 /* Formatter.swift */,
+				E6F40D6D21E6B1D300C2E404 /* Extensions */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		E6F40D6D21E6B1D300C2E404 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6F40D6E21E6B1D300C2E404 /* Strings.swift */,
+				E6F40D6F21E6B1D300C2E404 /* Formatters.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +123,7 @@
 				TargetAttributes = {
 					E6F40D6021E6B1A900C2E404 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -130,6 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6F40D7421E6B1D300C2E404 /* Formatter.swift in Sources */,
+				E6F40D7321E6B1D300C2E404 /* Formatters.swift in Sources */,
+				E6F40D7221E6B1D300C2E404 /* Strings.swift in Sources */,
+				E6F40D7521E6B1D300C2E404 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +294,7 @@
 		E6F40D6A21E6B1A900C2E404 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.begeman.kyle.Logger;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +321,7 @@
 		E6F40D6B21E6B1A900C2E404 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
