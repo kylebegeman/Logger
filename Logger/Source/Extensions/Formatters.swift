@@ -26,7 +26,7 @@
 
 import UIKit
 
-extension Formatters {
+public extension Formatters {
     public static let `default` = Formatter("[%@] %@ %@: %@", [
         .date("yyyy-MM-dd HH:mm:ss.SSS"),
         .location,
